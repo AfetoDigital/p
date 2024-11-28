@@ -3,32 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <title>Nosso Amor</title>
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body>
     <main>
       <!-- Slide de Imagens e Vídeos -->
-      <div class="carousel">
-        <img
-          src="https://s2-techtudo.glbimg.com/YV466w-hUwF_dTQIHPj_sbg9pW4=/0x0:1536x864/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2024/P/F/9THicRSG2c2VTkIKVkAw/imagine.art-ai-2.png"
-          alt="Imagem de nós"
-          class="active"
-        />
-        <img
-          src="https://services.meteored.com/img/article/inteligencia-artificial-aprende-a-reconstruir-imagens-vistas-por-pessoas-ciencia-fotos-1679175318563_1280.jpg"
-          alt="Imagem de amor"
-        />
-        <video controls>
-          <source src="video1.mp4" type="video/mp4" />
-          Seu navegador não suporta o formato de vídeo.
-        </video>
-        <div class="controls">
-          <button class="control-btn" id="prev">&#10094;</button>
-          <button class="control-btn" id="next">&#10095;</button>
+      <div class="slide-container">
+        <div class="left-image" onclick="rotateSlide('left')">
+          <img src="" alt="Imagem Esquerda" id="left-img" />
+        </div>
+        <div class="center-image">
+          <img src="" alt="Imagem Central" id="center-img" />
+        </div>
+        <div class="right-image" onclick="rotateSlide('right')">
+          <img src="" alt="Imagem Direita" id="right-img" />
         </div>
       </div>
+
+      <script>
+        // Lista de imagens para rotação
+        let images = [
+          "photos/photo1.jpg",
+          "photos/photo2.jpg",
+          "photos/photo3.jpg",
+          "photos/photo4.jpg",
+        ];
+
+        // Índices que correspondem às posições (esquerda, centro, direita)
+        let currentIndices = [0, 1, 2];
+
+        // Atualiza as imagens visíveis no layout
+        function updateImages() {
+          document.getElementById("left-img").src = images[currentIndices[0]];
+          document.getElementById("center-img").src = images[currentIndices[1]];
+          document.getElementById("right-img").src = images[currentIndices[2]];
+        }
+
+        // Rotaciona as imagens conforme a direção clicada
+        function rotateSlide(direction) {
+          if (direction === "left") {
+            // Rotação para a esquerda: move o último índice para o início
+            currentIndices.unshift(currentIndices.pop());
+          } else if (direction === "right") {
+            // Rotação para a direita: move o primeiro índice para o final
+            currentIndices.push(currentIndices.shift());
+          }
+          updateImages();
+        }
+
+        // Inicializa as imagens
+        updateImages();
+      </script>
 
       <h1>Luana & Gustavo</h1>
       <!-- Texto romântico -->
@@ -84,25 +111,6 @@
 
         // Atualizar o cronômetro a cada segundo
         setInterval(updateTimer, 1000);
-
-        // Lógica do slide de imagens e vídeos
-        let currentIndex = 0;
-        const items = document.querySelectorAll(
-          ".carousel img, .carousel video"
-        );
-        const totalItems = items.length;
-
-        document.getElementById("next").addEventListener("click", function () {
-          items[currentIndex].classList.remove("active");
-          currentIndex = (currentIndex + 1) % totalItems;
-          items[currentIndex].classList.add("active");
-        });
-
-        document.getElementById("prev").addEventListener("click", function () {
-          items[currentIndex].classList.remove("active");
-          currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-          items[currentIndex].classList.add("active");
-        });
       </script>
     </main>
   </body>
