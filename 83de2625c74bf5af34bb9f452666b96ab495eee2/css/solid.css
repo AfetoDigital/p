@@ -1,0 +1,107 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f1f1f1;
+    color: #3e3e3e;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    max-width: 600px;
+}
+h1 {
+    color: #e63946;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+h2 {
+    color: #2a9d8f;
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+}
+.content {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 30px auto;
+}
+.carousel {
+    position: relative;
+    max-width: 100vw;
+    height: 30vh;
+    margin: 30px auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.carousel img, .carousel video {
+    width: 100%;
+    height: 100%;
+    /* height: auto; */
+    display: none;
+    border-radius: 15px;
+}
+
+.carousel video {
+    width: 100%;
+    height: 100%;
+    /* height: auto; */
+    display: none;
+    border-radius: 15px;
+}
+
+.carousel img.active, .carousel video.active {
+    display: block;
+}
+.carousel .controls {
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+}
+.control-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.control-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.timer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-weight: bold;
+    color: #264653;
+    width: 100%;
+    background-color: #e9c46a;
+    margin-top: 30px;
+}
+.message {
+    font-size: 1.2em;
+    color: #264653;
+    font-style: italic;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+.romantic-text {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #6a4c93;
+}
+.heart {
+    font-size: 36px;
+    color: #e63946;
+    margin-top: 10px;
+}
