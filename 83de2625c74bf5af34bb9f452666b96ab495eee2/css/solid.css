@@ -97,3 +97,11 @@ h2 {
     color: #e63946;
     margin-top: 10px;
 }
+
+
+#portal {
+  position: fixed;
+  width: 10vw;
+  bottom: 12%;
+  right: 20px;
+}

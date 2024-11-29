@@ -97,11 +97,32 @@ h2 {
     font-size: 0.9em;
     line-height: 1.6;
     margin-top: 20px;
-    color: #ce64c5;
+    color: #fffbff;
+    text-shadow: 1px 1px 20px black;
 }
 
 .heart {
     font-size: 36px;
     color: #e63946;
     margin-top: 10px;
+}
+
+
+#portal {
+  position: fixed;
+  width: 10vw;
+  bottom: 12%;
+  right: 20px;
+  animation: sparkle 2s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+      transform: scale(0.8) rotate(0deg); /* Escala menor e sem rotação */
+      opacity: 0;
+  }
+  50% {
+      transform: scale(1.2) rotate(360deg); /* Escala maior e rotação completa */
+      opacity: 1;
+  }
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Nosso Amor</title>
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/black.css" rel="stylesheet" />
   </head>
   <body>
     <main>
@@ -29,6 +29,8 @@
           "photos/photo2.jpg",
           "photos/photo3.jpg",
           "photos/photo4.jpg",
+          "photos/photo5.jpg",
+          "photos/photo6.jpg",
         ];
 
         // Índices que correspondem às posições (esquerda, centro, direita)
@@ -85,33 +87,12 @@
         </p>
       </div>
 
-      <script>
-        // Data inicial do relacionamento (alterar para a data correta)
-        const startDate = new Date("2024-10-01T00:00:00");
-
-        function updateTimer() {
-          const currentTime = new Date();
-          const timeDiff = currentTime - startDate;
-
-          // Calcular os dias, horas, minutos e segundos
-          const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-          const hours = Math.floor(
-            (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          );
-          const minutes = Math.floor(
-            (timeDiff % (1000 * 60 * 60)) / (1000 * 60)
-          );
-          const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-          // Exibir o tempo no formato "XX dias, XX horas, XX minutos, XX segundos"
-          document.getElementById(
-            "timer"
-          ).innerHTML = `${days} dias, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
-        }
-
-        // Atualizar o cronômetro a cada segundo
-        setInterval(updateTimer, 1000);
-      </script>
+      <script src="js/functions.js"></script>
     </main>
+    <div id="portal">
+      <a href="../b395f24bce01e66d35ab677a7feb8e99aeadc6f3/index.html">
+        <img src="portal.png" />
+      </a>
+    </div>
   </body>
 </html>

@@ -7,7 +7,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(228, 228, 228, 0.8)), url(https://services.meteored.com/img/article/inteligencia-artificial-aprende-a-reconstruir-imagens-vistas-por-pessoas-ciencia-fotos-1679175318563_1280.jpg) no-repeat center center fixed;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(228, 228, 228, 0.8)), url(../photos/photo3.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
 }
@@ -106,4 +106,23 @@ h2 {
     font-size: 36px;
     color: #e63946;
     margin-top: 10px;
+}
+
+#portal {
+  position: fixed;
+  width: 10vw;
+  bottom: 12%;
+  right: 20px;
+  animation: sparkle 2s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+      transform: scale(0.8) rotate(0deg); /* Escala menor e sem rotação */
+      opacity: 0;
+  }
+  50% {
+      transform: scale(1.2) rotate(360deg); /* Escala maior e rotação completa */
+      opacity: 1;
+  }
 }
