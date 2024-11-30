@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Transforme sentimentos em declarações inesquecíveis com Afeto Digital. Criamos páginas personalizadas para eternizar momentos especiais."
+    />
+    <title>Afeto Digital</title>
+    <link rel="icon" type="image/x-icon" href="photos/icon.png">
+    <style>
+      :root {
+        --primary-color: #2f0059;
+        --second-color: #ff16ce;
+        --third-color: #3dadff;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #f9f9f9;
+      }
+      header {
+        background: linear-gradient(90deg, var(--primary-color), var(--third-color));
+        color: #fff;
+        padding: 2rem;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+      header p {
+        margin: 0.5rem 0 1.5rem;
+        font-size: 1.2rem;
+      }
+      header .cta-button {
+        background-color: #fff;
+        color: var(--primary-color);
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        display: inline-block;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      header .cta-button:hover {
+        background-color: var(--third-color);
+        color: #fff;
+      }
+      #logo {
+        width: 5em;
+        /* height: 6em; */
+        margin: auto;
+      }
+
+      #logo img {
+        width: 100%;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+      }
+      .feature {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 1.5rem;
+        flex: 1 1 calc(33% - 2rem);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .feature img {
+        max-width: 80px;
+        margin-bottom: 1rem;
+      }
+      .feature h3 {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+      }
+      .steps {
+        text-align: center;
+        margin: 2rem 0;
+      }
+      .steps ol {
+        margin: 1rem auto;
+        max-width: 600px;
+        text-align: left;
+      }
+
+      .old-price {
+        text-decoration: line-through;
+        color: #888;
+        font-size: 1rem;
+      }
+      .new-price {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .cta-button {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background-color: var(--primary-color);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      .cta-button:hover {
+        background-color: var(--third-color);
+        transform: scale(1.05);
+      }
+
+      .pricing {
+        text-align: center;
+        background: var(--primary-color);
+        color: #fff;
+        padding: 2rem;
+      }
+      .pricing h2 {
+        margin: 0 0 1rem;
+      }
+      .pricing .pricing-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .pricing .option {
+        background: #fff;
+        color: var(--primary-color);
+        border-radius: 5px;
+        padding: 1rem;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .pricing .option:hover {
+        transform: scale(1.05);
+      }
+      .pricing .option h3 {
+        margin: 0 0 0.5rem;
+      }
+      .pricing .option p {
+        margin: 0.5rem 0;
+      }
+      footer {
+        text-align: center;
+        background: var(--primary-color);
+        color: #fff;
+        padding: 1rem;
+      }
+      .footer-links a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <img src="photos/icon.png"/>
+      </div>
+      <h1>Afeto Digital</h1>
+      <p>Eternize seus sentimentos com uma página personalizada</p>
+      <a href="#pricing" class="cta-button">Escolha Seu Pacote</a>
+    </header>
+    <div class="container">
+      <section class="features">
+        <div class="feature">
+          <img
+            src="photos/1.png"
+            alt="Design Personalizado"
+          />
+          <h3>Design Personalizado</h3>
+          <p>Cada página é única e feita sob medida para você.</p>
+        </div>
+        <div class="feature">
+          <img src="photos/2.png" alt="Conteúdo Multimídia" />
+          <h3>Conteúdo Multimídia</h3>
+          <p>Inclua fotos, vídeos e mensagens especiais.</p>
+        </div>
+        <div class="feature">
+          <img
+            src="photos/3.webp"
+            alt="Compartilhamento Fácil"
+          />
+          <h3>Compartilhamento Fácil</h3>
+          <p>Envie o link para quem você ama em apenas um clique.</p>
+        </div>
+      </section>
+      <section class="steps">
+        <h2>Como Funciona</h2>
+        <ol>
+          <li>Entre em contato pelo WhatsApp ou Instagram.</li>
+          <li>Escolha o seu pacote.</li>
+          <li>Receba uma prévia.</li>
+          <li>Aprove o design e efetue o pagamento.</li>
+          <li>Receba seu link exclusivo.</li>
+        </ol>
+      </section>
+      <section class="pricing" id="pricing">
+        <h2>Escolha Seu Pacote</h2>
+        <p>
+          Transforme seus sentimentos em páginas inesquecíveis por um preço
+          especial!
+        </p>
+        <div class="pricing-options">
+          <div class="option">
+            <h3>Pacote Básico</h3>
+            <p>Inclui até 3 imagens e sem conteudo multimidia.</p>
+            <p>
+              <span class="old-price">De R$ 49,99</span><br>
+              <span class="new-price">por apenas R$ 19,99!</span>
+            </p>
+            <a href="https://wa.me/11915811912?text=Olá!%20Estou%20interessado%20no%20Pacote%20Básico.%20Ele%20inclui%20até%203%20imagens%20e%20sem%20conteúdo%20multimídia.%20Poderia%20me%20dar%20mais%20informações%20sobre%20esse%20pacote%3F" class="cta-button">Eu quero esse!</a>
+          </div>
+          <div class="option">
+            <h3>Pacote Premium</h3>
+            <p>Até 10 imagens + 01 vídeo + música.</p>
+            <p>
+              <span class="old-price">De R$ 79,99</span><br>
+              <span class="new-price">por apenas R$ 39,99!</span>
+            </p>
+            <a href="https://wa.me/11915811912?text=Olá!%20Estou%20interessado%20no%20Pacote%20Premium.%20Ele%20inclui%20até%2010%20imagens%2C%2001%20vídeo%20e%20música.%20Poderia%20me%20dar%20mais%20informações%20sobre%20esse%20pacote%3F" class="cta-button">Escolher Agora</a>
+          </div>
+          <div class="option">
+            <h3>Pacote Deluxe</h3>
+            <p>Inclui tudo do Premium, mais elementos interativos e uma Page Universo para até 3 memórias com fotos e mensagens únicas.</p>
+            <p>
+              <span class="old-price">De R$ 149,99</span><br>
+              <span class="new-price">por apenas R$ 99,99!</span>
+            </p>
+            <a href="https://wa.me/11915811912?text=Olá!%20Estou%20interessado%20no%20Pacote%20Deluxe.%20Ele%20inclui%20tudo%20do%20Pacote%20Premium%2C%20mais%20elementos%20interativos%20e%20uma%20Page%20Universo%20para%20até%203%20memórias%20com%20fotos%20e%20mensagens%20únicas.%20Poderia%20me%20dar%20mais%20informações%20sobre%20esse%20pacote%3F" class="cta-button">Quero o Melhor!</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>
+        Entre em contato: <a href="https://wa.me/11915811912">WhatsApp</a> |
+        <a href="https://www.instagram.com/afeto_digital/">Instagram</a>
+      </p>
+      <p class="footer-links">
+        &copy; 2024 Afeto Digital. Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
+</html>
