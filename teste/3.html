@@ -25,17 +25,9 @@
         display: flex;
         justify-content: center;
         z-index: 1;
-    background-color: rgb(0 0 0 / 83%);
+        background-color: rgb(0 0 0 / 83%);
         height: 100%;
         align-items: center;
-      }
-
-      .bow {
-        width: 100px;
-        height: 100px;
-        background: url("https://img.icons8.com/emoji/96/red-bow-emoji.png")
-          no-repeat center;
-        background-size: contain;
       }
 
       .gift {
@@ -50,39 +42,41 @@
       }
 
       .horizontal-bar {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        height: 20px;
+        height: 100%;
         background-color: #ff69b4;
         transform: translateY(-50%);
         z-index: 1;
+        width: 100%;
         transition: width 0.5s ease;
+        position: absolute;
+        top: 10px;
       }
 
-      .romantic-phrase {
-        display: none;
-        margin-top: 30px;
-        font-size: 1.5rem;
-        color: #b30089;
+      #container-bar {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        height: 20px;
+        justify-content: center;
       }
     </style>
   </head>
   <body>
-    <!-- Música do Spotify -->
-    <h2>Música no Spotify</h2>
+    <!-- Vídeo com configurações adicionais -->
+    <video id="romanticVideo" width="100%" height="40%" controls>
+      <source
+        src="..\83de2625c74bf5af34bb9f452666b96ab495eee2\photos\video.mp4"
+        type="video/mp4"
+      />
+      Seu navegador não suporta a tag <code>video</code>.
+    </video>
     <br />
-    <div id="container">
-      <div class="bow"></div>
-      <div class="horizontal-bar" id="bar"></div>
-      <div class="gift" onclick="showEffect(); playSpotify()"></div>
-    </div>
 
     <script>
       function showEffect() {
         const bar = document.getElementById("bar");
         const phrase = document.getElementById("container");
+        const video = document.getElementById("romanticVideo");
 
         // Reduce the width of the bar
         bar.style.width = "0";
@@ -91,6 +85,9 @@
         setTimeout(() => {
           phrase.style.display = "none";
         }, 500); // Match the transition time
+
+        // Play the video
+        video.play();
       }
     </script>
   </body>

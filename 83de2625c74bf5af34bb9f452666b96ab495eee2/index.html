@@ -6,10 +6,20 @@
 
     <title>Nosso Amor</title>
     <link rel="icon" type="image/x-icon" href="photos/icon.png" />
-    <link href="css/white-solid.css" rel="stylesheet" />
+    <link href="css/black-back.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body>
+
     <main>
+      <div id="container">
+        <div id="container-bar">
+          <div class="horizontal-bar" id="bar"></div>
+        </div>
+
+        <div class="gift" onclick="showEffect();"></div>
+      </div>
+
       <!-- Slide de Imagens e Vídeos -->
       <div class="slide-container">
         <div class="left-image" onclick="rotateSlide('left')">
@@ -35,8 +45,11 @@
       </div>
 
       <!-- Vídeo com configurações adicionais -->
-      <video width="100%" height="40%" controls autoplay loop muted>
-        <source src="video.mp4" type="video/mp4" />
+      <video id="romanticVideo" width="100%" height="40%" controls>
+        <source
+          src="..\83de2625c74bf5af34bb9f452666b96ab495eee2\photos\video.mp4"
+          type="video/mp4"
+        />
         Seu navegador não suporta a tag <code>video</code>.
       </video>
 

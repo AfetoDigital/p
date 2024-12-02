@@ -49,3 +49,24 @@ function rotateSlide(direction) {
 
 // Inicializa as imagens
 updateImages();
+
+
+
+
+
+function showEffect() {
+  const bar = document.getElementById("bar");
+  const phrase = document.getElementById("container");
+  const video = document.getElementById("romanticVideo");
+
+  // Reduce the width of the bar
+  bar.style.width = "0";
+
+  // Show the romantic phrase after the animation
+  setTimeout(() => {
+    phrase.style.display = "none";
+  }, 500); // Match the transition time
+
+  // Play the video
+  video.play();
+}
