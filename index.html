@@ -8,14 +8,14 @@
       content="Transforme sentimentos em declarações inesquecíveis com Afeto Digital. Criamos páginas personalizadas para eternizar momentos especiais."
     />
     <title>Afeto Digital</title>
-    <link rel="icon" type="image/x-icon" href="photos/icon.png">
+    <link rel="icon" type="image/x-icon" href="photos/icon.png" />
     <style>
       :root {
         --primary-color: #2f0059;
         --second-color: #ff16ce;
         --third-color: #3dadff;
       }
-      
+
       body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -24,7 +24,11 @@
         background-color: #f9f9f9;
       }
       header {
-        background: linear-gradient(90deg, var(--primary-color), var(--third-color));
+        background: linear-gradient(
+          90deg,
+          var(--primary-color),
+          var(--third-color)
+        );
         color: #fff;
         padding: 2rem;
         text-align: center;
@@ -88,6 +92,109 @@
         color: var(--primary-color);
         font-size: 1.2rem;
       }
+      .layouts {
+        text-align: center;
+        margin: 3rem 0;
+      }
+
+      .layouts h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+      }
+
+      .layouts p {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+      }
+
+      #models {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 2rem;
+      }
+
+      .layouts-slider {
+        text-align: center;
+        margin: 3rem 0;
+      }
+
+      .layouts-slider h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+      }
+
+      .layouts-slider p {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+      }
+
+      .slider {
+        position: relative;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 1rem;
+        flex: 1 1 calc(33% - 2rem);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .variation:hover {
+        transform: scale(1.05);
+      }
+
+      .variation img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 0.5rem;
+      }
+
+      .variation p {
+        font-size: 0.9rem;
+        color: #666;
+        margin: 0.5rem 0;
+      }
+
+      .slider-image {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .slider-image img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .slider-controls {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid var(--primary-color);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+      }
+
+      .circle:hover {
+        transform: scale(1.2);
+        border-color: var(--third-color);
+      }
+
+      .circle.active {
+        border-color: var(--second-color);
+        transform: scale(1.3);
+      }
+
       .steps {
         text-align: center;
         margin: 2rem 0;
@@ -176,7 +283,7 @@
   <body>
     <header>
       <div id="logo">
-        <img src="photos/icon.png"/>
+        <img src="photos/icon.png" />
       </div>
       <h1>Afeto Digital</h1>
       <p>Eternize seus sentimentos com uma página personalizada</p>
@@ -185,10 +292,7 @@
     <div class="container">
       <section class="features">
         <div class="feature">
-          <img
-            src="photos/1.png"
-            alt="Design Personalizado"
-          />
+          <img src="photos/1.png" alt="Design Personalizado" />
           <h3>Design Personalizado</h3>
           <p>Cada página é única e feita sob medida para você.</p>
         </div>
@@ -198,14 +302,77 @@
           <p>Inclua fotos, vídeos e mensagens especiais.</p>
         </div>
         <div class="feature">
-          <img
-            src="photos/3.webp"
-            alt="Compartilhamento Fácil"
-          />
+          <img src="photos/3.webp" alt="Compartilhamento Fácil" />
           <h3>Compartilhamento Fácil</h3>
           <p>Envie o link para quem você ama em apenas um clique.</p>
         </div>
       </section>
+
+      <section class="layouts">
+        <h2>Modelos de Layout</h2>
+        <p>Escolha entre os nossos modelos e veja suas variações para atender às suas necessidades.</p>
+        <div id="models">
+      
+          <div class="model">
+            <div class="slider">
+              <div class="slider-image model1-images">
+                <img
+                  src="photos/model1-variation1.png"
+                  alt="Modelo Clássico - Var. 1"
+                  id="model1-image"
+                />
+              </div>
+              <div class="slider-controls">
+                <!-- Circles for navigation -->
+                <div
+                  class="circle model1-circle"
+                  data-image="photos/model1-variation1.png"
+                  style="background: linear-gradient(45deg, black 50%, purple 50%)"
+                ></div>
+                <div
+                  class="circle model1-circle"
+                  data-image="photos/model1-variation2.png"
+                  style="background: white"
+                ></div>
+                <div
+                  class="circle model1-circle"
+                  data-image="photos/model1-variation3.png"
+                  style="background: linear-gradient(45deg, white 50%, orange 50%)"
+                ></div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="model">
+            <div class="slider">
+              <div class="slider-image model2-images">
+                <img
+                  src="photos/model2-variation1.png"
+                  alt="Modelo Moderno - Var. 1"
+                  id="model2-image"
+                />
+              </div>
+              <div class="slider-controls">
+                <!-- Circles for navigation -->
+                <div
+                  class="circle model2-circle"
+                  data-image="photos/model2-variation1.png"
+                >T1</div>
+                <div
+                  class="circle model2-circle"
+                  data-image="photos/model2-variation2.png"
+                >T2</div>
+                <div
+                  class="circle model2-circle"
+                  data-image="photos/model2-variation3.png"
+                >T3</div>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+
       <section class="steps">
         <h2>Como Funciona</h2>
         <ol>
@@ -227,28 +394,43 @@
             <h3>Pacote Básico</h3>
             <p>Inclui até 3 imagens e sem conteudo multimidia.</p>
             <p>
-              <span class="old-price">De R$ 49,99</span><br>
+              <span class="old-price">De R$ 49,99</span><br />
               <span class="new-price">por apenas R$ 19,99!</span>
             </p>
-            <a href="https://wa.me/5511915811912?text=Olá!%20Estou%20interessado%20no%20Pacote%20Básico.%20Ele%20inclui%20até%203%20imagens%20e%20sem%20conteúdo%20multimídia.%20Poderia%20me%20dar%20mais%20informações%20sobre%20esse%20pacote%3F" class="cta-button">Eu quero esse!</a>
+            <a
+              href="https://wa.me/5511915811912?text=Olá!%20Estou%20interessado%20no%20Pacote%20Básico.%20Ele%20inclui%20até%203%20imagens%20e%20sem%20conteúdo%20multimídia.%20Poderia%20me%20dar%20mais%20informações%20sobre%20esse%20pacote%3F"
+              class="cta-button"
+              >Eu quero esse!</a
+            >
           </div>
           <div class="option">
             <h3>Pacote Premium</h3>
             <p>Até 10 imagens + 01 vídeo + música.</p>
             <p>
-              <span class="old-price">De R$ 79,99</span><br>
+              <span class="old-price">De R$ 79,99</span><br />
               <span class="new-price">por apenas R$ 39,99!</span>
             </p>
-            <a href="https://wa.me/5511915811912?text=Olá!%20Estou%20interessado%20no%20Pacote%20Premium.%20Ele%20inclui%20até%2010%20imagens%2C%2001%20vídeo%20e%20música.%20Poderia%20me%20dar%20mais%20informações%20sobre%20esse%20pacote%3F" class="cta-button">Escolher Agora</a>
+            <a
+              href="https://wa.me/5511915811912?text=Olá!%20Estou%20interessado%20no%20Pacote%20Premium.%20Ele%20inclui%20até%2010%20imagens%2C%2001%20vídeo%20e%20música.%20Poderia%20me%20dar%20mais%20informações%20sobre%20esse%20pacote%3F"
+              class="cta-button"
+              >Escolher Agora</a
+            >
           </div>
           <div class="option">
             <h3>Pacote Deluxe</h3>
-            <p>Inclui tudo do Premium, mais elementos interativos e uma Page Universo para até 3 memórias com fotos e mensagens únicas.</p>
             <p>
-              <span class="old-price">De R$ 149,99</span><br>
+              Inclui tudo do Premium, mais elementos interativos e uma Page
+              Universo para até 3 memórias com fotos e mensagens únicas.
+            </p>
+            <p>
+              <span class="old-price">De R$ 149,99</span><br />
               <span class="new-price">por apenas R$ 99,99!</span>
             </p>
-            <a href="https://wa.me/5511915811912?text=Olá!%20Estou%20interessado%20no%20Pacote%20Deluxe.%20Ele%20inclui%20tudo%20do%20Pacote%20Premium%2C%20mais%20elementos%20interativos%20e%20uma%20Page%20Universo%20para%20até%203%20memórias%20com%20fotos%20e%20mensagens%20únicas.%20Poderia%20me%20dar%20mais%20informações%20sobre%20esse%20pacote%3F" class="cta-button">Quero o Melhor!</a>
+            <a
+              href="https://wa.me/5511915811912?text=Olá!%20Estou%20interessado%20no%20Pacote%20Deluxe.%20Ele%20inclui%20tudo%20do%20Pacote%20Premium%2C%20mais%20elementos%20interativos%20e%20uma%20Page%20Universo%20para%20até%203%20memórias%20com%20fotos%20e%20mensagens%20únicas.%20Poderia%20me%20dar%20mais%20informações%20sobre%20esse%20pacote%3F"
+              class="cta-button"
+              >Quero o Melhor!</a
+            >
           </div>
         </div>
       </section>
@@ -263,4 +445,27 @@
       </p>
     </footer>
   </body>
+
+  <script>
+    function doToggleLayout(circleClass, imageId) {
+      const circles = document.querySelectorAll(circleClass);
+      const layoutImage = document.getElementById(imageId);
+  
+      circles.forEach((circle) => {
+        circle.addEventListener("click", () => {
+          // Remove the active class from all circles
+          circles.forEach((c) => c.classList.remove("active"));
+          // Add active class to the clicked circle
+          circle.classList.add("active");
+          // Change the image
+          const newImage = circle.getAttribute("data-image");
+          layoutImage.src = newImage;
+        });
+      });
+    }
+  
+    doToggleLayout(".model1-circle", "model1-image");
+    doToggleLayout(".model2-circle", "model2-image");
+  </script>
+  
 </html>

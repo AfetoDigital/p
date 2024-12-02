@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Nosso Amor</title>
-    <link href="css/black.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="photos/icon.png" />
+    <link href="css/white-solid.css" rel="stylesheet" />
   </head>
   <body>
     <main>
@@ -21,55 +22,10 @@
           <img src="" alt="Imagem Direita" id="right-img" />
         </div>
       </div>
-
-      <script>
-        // Lista de imagens para rotação
-        let images = [
-          "photos/photo1.jpg",
-          "photos/photo2.jpg",
-          "photos/photo3.jpg",
-          "photos/photo4.jpg",
-          "photos/photo5.jpg",
-          "photos/photo6.jpg",
-        ];
-
-        // Índices que correspondem às posições (esquerda, centro, direita)
-        let currentIndices = [0, 1, 2];
-
-        // Atualiza as imagens visíveis no layout
-        function updateImages() {
-          document.getElementById("left-img").src = images[currentIndices[0]];
-          document.getElementById("center-img").src = images[currentIndices[1]];
-          document.getElementById("right-img").src = images[currentIndices[2]];
-        }
-
-        // Rotaciona as imagens conforme a direção clicada
-        function rotateSlide(direction) {
-          if (direction === "left") {
-            // Rotação para a esquerda: move o último índice para o início
-            currentIndices.unshift(currentIndices.pop());
-          } else if (direction === "right") {
-            // Rotação para a direita: move o primeiro índice para o final
-            currentIndices.push(currentIndices.shift());
-          }
-          updateImages();
-        }
-
-        // Inicializa as imagens
-        updateImages();
-      </script>
-
-      <h1>Luana & Gustavo</h1>
+      <h1 couple="name"></h1>
       <!-- Texto romântico -->
       <div class="content">
-        <p class="romantic-text">
-          Desde o instante em que nossos caminhos se cruzaram, tudo se tornou
-          mais colorido. Cada momento ao seu lado é uma eternidade de
-          felicidade. Em cada sorriso seu, eu encontro paz, e em cada olhar,
-          vejo a promessa de um amor que cresce a cada dia. Eu te amo mais do
-          que as palavras podem dizer, e sei que ao seu lado, o futuro é ainda
-          mais brilhante.
-        </p>
+        <p first="message" class="romantic-text"></p>
       </div>
 
       <!-- Cronômetro -->
@@ -78,15 +34,18 @@
         <p id="timer"></p>
       </div>
 
+      <!-- Vídeo com configurações adicionais -->
+      <video width="100%" height="40%" controls autoplay loop muted>
+        <source src="video.mp4" type="video/mp4" />
+        Seu navegador não suporta a tag <code>video</code>.
+      </video>
+
       <!-- Mensagem de amor -->
       <div class="message">
-        <p>
-          Eu sou imensamente grato(a) por ter você em minha vida. Que cada dia
-          ao seu lado seja uma celebração do nosso amor eterno. Te amo!
-          <span class="heart">❤️</span>
-        </p>
+        <p second="message"></p>
       </div>
 
+      <script src="config.js"></script>
       <script src="js/functions.js"></script>
     </main>
     <div id="portal">
