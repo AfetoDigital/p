@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livro da Nossa Vida</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="book">
+      <div class="book-cover">
+        <p>Livro da Nossa Vida</p>
+      </div>
+      <div class="page" id="page1">
+        <div class="left">
+          <div class="photo">Foto 1</div>
+          <div class="photo">Foto 2</div>
+          <div class="photo">Foto 3</div>
+          <div class="photo">Foto 4</div>
+        </div>
+        <div class="right">
+          <div class="photo">Foto 5</div>
+          <div class="photo">Foto 6</div>
+          <div class="photo">Foto 7</div>
+          <div class="photo">Foto 8</div>
+        </div>
+      </div>
+      <div class="page" id="page2" style="display: none">
+        <div class="left">
+          <div class="photo">Foto 9</div>
+          <div class="photo">Foto 10</div>
+          <div class="photo">Foto 11</div>
+          <div class="photo">Foto 12</div>
+        </div>
+        <div class="right">
+          <div class="photo">Foto 13</div>
+          <div class="photo">Foto 14</div>
+          <div class="photo">Foto 15</div>
+          <div class="photo">Foto 16</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Áreas de navegação -->
+    <div class="navigation-zone nav-left" onclick="toggleBook()"></div>
+    <div class="navigation-zone nav-right" onclick="nextPage()"></div>
+
+    <script>
+      var open = false;
+
+      function toggleBook() {
+        if (open == false) {
+          const book = document.querySelector(".book");
+          book.classList.toggle("book-opened");
+          open = true;
+        }
+      }
+
+      const pages = document.querySelectorAll(".page");
+      let currentPage = 0;
+
+      // Função para voltar a página
+      function prevPage() {
+        if (currentPage > 0) {
+          currentPage--;
+          pages[currentPage].style.transform = "rotateY(0deg)";
+          pages[currentPage].style.display = "none";
+          pages[currentPage + 1].style.display = "flex";
+        }
+      } // Função para avançar a página
+      function nextPage() {
+        if (currentPage < pages.length - 1) {
+          // Aplica a rotação na página atual
+          pages[currentPage].style.transform = "rotateY(-180deg)";
+          pages[currentPage].style.zIndex = currentPage; // Garante a ordem de empilhamento
+
+          // Incrementa o contador da página atual
+          currentPage++;
+
+          // Aguarda o tempo da animação antes de exibir a próxima página
+          setTimeout(() => {
+            pages[currentPage].style.display = "flex"; // Mostra a próxima página
+            pages[currentPage - 1].style.display = "none"; // Oculta a página anterior
+          }, 1000); // Tempo de transição deve ser igual ao tempo definido no CSS
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -250,3 +250,12 @@ line {
     cursor: pointer;
     border-radius: 5px;
 }
+
+
+footer {
+    color: white;
+    z-index: 2;
+    position: absolute;
+    bottom: 0px;
+    font-size: 0.5em;
+}

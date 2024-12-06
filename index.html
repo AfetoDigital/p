@@ -310,9 +310,11 @@
 
       <section class="layouts">
         <h2>Modelos de Layout</h2>
-        <p>Escolha entre os nossos modelos e veja suas variações para atender às suas necessidades.</p>
+        <p>
+          Escolha entre os nossos modelos e veja suas variações para atender às
+          suas necessidades.
+        </p>
         <div id="models">
-      
           <div class="model">
             <div class="slider">
               <div class="slider-image model1-images">
@@ -327,7 +329,9 @@
                 <div
                   class="circle model1-circle"
                   data-image="photos/model1-variation1.png"
-                  style="background: linear-gradient(45deg, black 50%, purple 50%)"
+                  style="
+                    background: linear-gradient(45deg, black 50%, purple 50%);
+                  "
                 ></div>
                 <div
                   class="circle model1-circle"
@@ -337,12 +341,14 @@
                 <div
                   class="circle model1-circle"
                   data-image="photos/model1-variation3.png"
-                  style="background: linear-gradient(45deg, white 50%, orange 50%)"
+                  style="
+                    background: linear-gradient(45deg, white 50%, orange 50%);
+                  "
                 ></div>
               </div>
             </div>
           </div>
-      
+
           <div class="model">
             <div class="slider">
               <div class="slider-image model2-images">
@@ -357,19 +363,44 @@
                 <div
                   class="circle model2-circle"
                   data-image="photos/model2-variation1.png"
-                >T1</div>
+                >
+                  T1
+                </div>
                 <div
                   class="circle model2-circle"
                   data-image="photos/model2-variation2.png"
-                >T2</div>
+                >
+                  T2
+                </div>
                 <div
                   class="circle model2-circle"
                   data-image="photos/model2-variation3.png"
-                >T3</div>
+                >
+                  T3
+                </div>
               </div>
             </div>
           </div>
-      
+
+          <div class="model">
+            <div class="slider">
+              <div class="slider-image model3-images">
+                <img
+                  src="photos/model3-variation1.png"
+                  alt="Modelo Moderno - Var. 1"
+                  id="model3-image"
+                />
+              </div>
+              <div class="slider-controls">
+                <!-- Circles for navigation -->
+                <div
+                  class="circle model3-circle"
+                  data-image="photos/model3-variation1.png"
+                  style="background: rgb(0, 0, 0)"
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -402,7 +433,9 @@
               class="cta-button"
               >Eu quero esse!</a
             ><br /><br />
-            <small><b>Válido por 1 ano, com renovação necessária após.</b></small>
+            <small
+              ><b>Válido por 1 ano, com renovação necessária após.</b></small
+            >
           </div>
           <div class="option">
             <h3>Pacote Premium</h3>
@@ -416,7 +449,9 @@
               class="cta-button"
               >Escolher Agora</a
             ><br /><br />
-            <small><b>Válido por 1 ano, com renovação necessária após.</b></small>
+            <small
+              ><b>Válido por 1 ano, com renovação necessária após.</b></small
+            >
           </div>
           <div class="option">
             <h3>Pacote Deluxe</h3>
@@ -433,7 +468,9 @@
               class="cta-button"
               >Quero o Melhor!</a
             ><br /><br />
-            <small><b>Válido por 1 ano, com renovação necessária após.</b></small>
+            <small
+              ><b>Válido por 1 ano, com renovação necessária após.</b></small
+            >
           </div>
         </div>
       </section>
@@ -453,7 +490,7 @@
     function doToggleLayout(circleClass, imageId) {
       const circles = document.querySelectorAll(circleClass);
       const layoutImage = document.getElementById(imageId);
-  
+
       circles.forEach((circle) => {
         circle.addEventListener("click", () => {
           // Remove the active class from all circles
@@ -466,9 +503,8 @@
         });
       });
     }
-  
+
     doToggleLayout(".model1-circle", "model1-image");
     doToggleLayout(".model2-circle", "model2-image");
   </script>
-  
 </html>

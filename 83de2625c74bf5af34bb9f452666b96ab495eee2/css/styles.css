@@ -39,3 +39,11 @@
     position: absolute;
     top: 10px;
 }
+
+
+footer {
+    color: white;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 80px;
+}
