@@ -1,0 +1,2 @@
+npm run build <- para compilar o projeto
+npm start iniciar projeto
