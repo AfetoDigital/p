@@ -1,0 +1,57 @@
+footer {
+    width: calc(100% - 80px);
+    height: 350px;
+    background-color: rgb(21 21 21 / 80);
+    padding: 40px;
+}
+
+#footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+#footer .horarys div {
+    margin: 4px;
+    text-align: justify;
+}
+
+.logoFooter {
+    position: relative;
+    width: 5em;
+    left: 25px;
+}
+
+.logoFooter img {
+    width: 100%;
+    height: 100%;
+}
+
+.footerFrame {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 0;
+}
+
+.footerFrame label {
+    font-weight: bold;
+    font-family: serif;
+    font-size: 25px;
+    margin: 20px 0px;
+}
+
+.footerSocialMedia {
+    font-size: 50px;
+}
+
+
+.footerFrame:not(:last-child) {
+    border-right: 1px solid white;
+    padding: 0px 25px;
+}
