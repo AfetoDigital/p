@@ -7,7 +7,6 @@ import "./Home.css";
 import { FaFacebook } from "react-icons/fa"; // Importa um ícone do FontAwesome
 import { FaWhatsapp } from "react-icons/fa"; // Importa um ícone do FontAwesome
 import { FaInstagram } from "react-icons/fa"; // Importa um ícone do FontAwesome
-import { FaI } from "react-icons/fa6";
 
 function Home() {
   return (
@@ -32,8 +31,8 @@ function Home() {
         </div>
         <div id="frames">
           <div className="frame">
-            <img src={frameIMG} />
-            <img src={photo1} />
+            <img alt="" src={frameIMG} />
+            <img alt="" src={photo1} />
             <div className="frameInfo">
               <label className="name">Nome do Indíviduo</label>
               <label className="position">Função</label>
@@ -45,8 +44,8 @@ function Home() {
             </div>
           </div>
           <div className="frame">
-            <img src={frameIMG} />
-            <img src={photo1} />
+            <img alt="" src={frameIMG} />
+            <img alt="" src={photo1} />
             <div className="frameInfo">
               <label className="name">Nome do Indíviduo</label>
               <label className="position">Função</label>

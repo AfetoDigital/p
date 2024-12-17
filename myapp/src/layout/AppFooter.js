@@ -12,7 +12,7 @@ function AppFooter() {
           <label>Endereço</label>
           <div>
             <div className="logoFooter">
-              <img src={logo} />
+              <img alt="" src={logo} />
             </div>
             Av. Arcilio Federzoni, 229, Jardim Silvia Francisco Morato/SP
           </div>

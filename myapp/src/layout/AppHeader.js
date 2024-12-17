@@ -1,8 +1,6 @@
 import "./AppHeader.css";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./../components/Home.js";
-import About from "./../components/About.js";
-import { useState, useEffect } from "react";
 import logo from "./../images/logo.jpg";
 
 function AppHeader() {
@@ -24,7 +22,7 @@ function AppHeader() {
       <header>
         <div id="header">
           <div className="logo">
-            <img src={logo} />
+            <img alt="" src={logo} />
           </div>
           <nav id="menu">
             <ul>
