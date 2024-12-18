@@ -1,5 +1,5 @@
 import "./AppHeader.css";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { Link as Scroll } from "react-scroll";
 import Home from "./../components/Home.js";
 import logo from "./../images/logo.jpg";

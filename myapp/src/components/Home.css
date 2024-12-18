@@ -16,7 +16,7 @@
 .legends {
     position: relative;
     width: 100%;
-    height: calc(auto - 50%);
+    height: auto;
     /* display: flex; */
     color: var(--primary-title-color);
     /* justify-content: center; */

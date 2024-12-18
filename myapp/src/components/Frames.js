@@ -18,17 +18,17 @@ function FrameSquare({ name, image, facebook, whatsapp, instagram }) {
         <label>{name}</label>
         <div className="socialMedia">
           {facebook && (
-            <a href={`https://www.facebook.com/${facebook}`} target="_blank">
+            <a href={`https://www.facebook.com/${facebook}`} target="_blank"  rel="noopener noreferrer">
               <FaFacebook className="facebook icon" />
             </a>
           )}
           {whatsapp && (
-            <a href={`https://wa.me/${whatsapp}`} target="_blank">
+            <a href={`https://wa.me/${whatsapp}`} target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="whatsapp icon" />
             </a>
           )}
           {instagram && (
-            <a href={`https://www.instagram.com${instagram}`} target="_blank">
+            <a href={`https://www.instagram.com${instagram}`} target="_blank" rel="noopener noreferrer">
               <FaInstagram className="instagram icon" />
             </a>
           )}
@@ -52,17 +52,17 @@ function FrameOblong({ name, image, facebook, whatsapp, instagram }) {
         <label className="position">Função</label>
         <div className="socialMedia">
           {facebook && (
-            <a href={`https://www.facebook.com/${facebook}`} target="_blank">
+            <a href={`https://www.facebook.com/${facebook}`} target="_blank" rel="noopener noreferrer">
               <FaFacebook className="facebook icon" />
             </a>
           )}
           {whatsapp && (
-            <a href={`https://wa.me/${whatsapp}`} target="_blank">
+            <a href={`https://wa.me/${whatsapp}`} target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="whatsapp icon" />
             </a>
           )}
           {instagram && (
-            <a href={`https://www.instagram.com${instagram}`} target="_blank">
+            <a href={`https://www.instagram.com${instagram}`} target="_blank" rel="noopener noreferrer">
               <FaInstagram className="instagram icon" />
             </a>
           )}
