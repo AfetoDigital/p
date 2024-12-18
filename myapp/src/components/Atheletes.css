@@ -1,0 +1,58 @@
+#framesAthelets {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.frameAthelet {
+    position: relative;
+    aspect-ratio: 4 / 4;
+    flex-basis: calc(100% / 8);
+}
+
+.frameAthelet img:nth-child(1) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.frameAthelet img:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+
+.frameAthelet:hover .frameAtheleteInfo {
+    opacity: 1;
+    visibility: visible;
+    transition-duration: 0.2s;
+    border: 1px solid var(--primary-border-color);
+}
+
+.frameAtheleteInfo {
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background: rgb(38 38 38 / 50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.frameAtheleteInfo label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    color: white;
+}

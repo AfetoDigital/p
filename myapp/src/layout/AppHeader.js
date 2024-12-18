@@ -1,7 +1,10 @@
 import "./AppHeader.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Link as Scroll } from "react-scroll";
 import Home from "./../components/Home.js";
 import logo from "./../images/logo.jpg";
+import Atheletes from "../components/Atheletes.js";
+import { HashLink } from "react-router-hash-link";
 
 function AppHeader() {
   document.addEventListener("scroll", function () {
@@ -26,21 +29,27 @@ function AppHeader() {
           </div>
           <nav id="menu">
             <ul>
-              <a href="#legends">
+              <HashLink smooth to="/#start">
                 <li>Inicio</li>
-              </a>
-              <a href="#trainers">
+              </HashLink>
+              <HashLink smooth to="/atletas/#start">
+                <li>Atletas</li>
+              </HashLink>
+              <Scroll to="modalities" smooth={true} duration={500}>
+                <li>Modalidades</li>
+              </Scroll>
+              <Scroll to="trainers" smooth={true} duration={500}>
                 <li>Equipe</li>
-              </a>
-              <a href="#plans">
+              </Scroll>
+              <Scroll to="plans" smooth={true} duration={500}>
                 <li>Planos</li>
-              </a>
-              <a href="#horarys">
+              </Scroll>
+              <Scroll to="horarys" smooth={true} duration={500}>
                 <li>Horários</li>
-              </a>
-              <a href="#contacts">
+              </Scroll>
+              <Scroll to="contacts" smooth={true} duration={500}>
                 <li>Contatos</li>
-              </a>
+              </Scroll>
             </ul>
           </nav>
         </div>
@@ -49,7 +58,7 @@ function AppHeader() {
       {/* Definindo as rotas */}
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/atletas" element={<Atheletes />} />
       </Routes>
     </Router>
   );
