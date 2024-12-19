@@ -11,6 +11,7 @@ import {
   FrameStatus,
   FrameSelect,
 } from "./../components/Frames.js";
+import LatestYouTubeVideo from "./../components/LatestYouTubeVideo.js";
 
 // ICONS
 import { FaFacebook } from "react-icons/fa"; // Importa um ícone do FontAwesome
@@ -26,6 +27,7 @@ import fighter from "./../images/box.jpg";
 import crossfit from "./../images/crossfit.jpg";
 import fitdance from "./../images/fitdance.jpg";
 import bodybuilding from "./../images/muscle.jpg";
+import podcast from "./../images/background4.jpg";
 
 function AppFooter() {
   return (
@@ -38,13 +40,47 @@ function AppFooter() {
         <i id="trainers" className="br"></i>
         <div className="containerLegends CLTSC CLSTSC">
           <h1>Equipe</h1>
-          <h3>Cada membro da equipe é fundamental para o nosso sucesso. Vamos crescer, conquistar e alcançar grandes resultados juntos!</h3>
+          <h3>
+            Cada membro da equipe é fundamental para o nosso sucesso. Vamos
+            crescer, conquistar e alcançar grandes resultados juntos!
+          </h3>
         </div>
         <Frames>
-          <Frame name="Teste" image={user} whatsapp="123" facebook="123"></Frame>
+          <Frame
+            name="Teste"
+            image={user}
+            whatsapp="123"
+            facebook="123"
+          ></Frame>
           <Frame name="Teste" image={user} whatsapp="123"></Frame>
-          <Frame name="Teste" image={user} whatsapp="123" facebook="123" instagram="123"></Frame>
+          <Frame
+            name="Teste"
+            image={user}
+            whatsapp="123"
+            facebook="123"
+            instagram="123"
+          ></Frame>
         </Frames>
+      </Container>
+
+      <Container backgroundColor="rgb(20 20 20)" padding="padded-class">
+        <i id="podcast" className="br"></i>
+        <div className="containerLegends CLTFC CLSTFC">
+          <h1 style={{ fontFamily: "cursive", margin: "0px" }}>
+            Pode+
+            <br />
+            Chora-
+          </h1>
+          <h3>Assista ao último vídeo do nosso PodCast</h3>
+          <div id="podcastContent">
+            <div className="video">
+              <LatestYouTubeVideo />
+            </div>
+            <div className="videoImage">
+              <img alt="" src={podcast} />
+            </div>
+          </div>
+        </div>
       </Container>
 
       {/* MODALIDADES */}
@@ -82,7 +118,10 @@ function AppFooter() {
         <i id="plans" className="br"></i>
         <div className="containerLegends CLTFC CLSTFC">
           <h1>Plano(s)</h1>
-          <h3>Escolha o plano que se adapta às suas necessidades e venha fazer parte de uma comunidade que está sempre em busca de evolução.</h3>
+          <h3>
+            Escolha o plano que se adapta às suas necessidades e venha fazer
+            parte de uma comunidade que está sempre em busca de evolução.
+          </h3>
         </div>
 
         <FramesSelect>

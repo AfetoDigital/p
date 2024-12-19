@@ -44,6 +44,9 @@ function AppHeader() {
               <Scroll to="plans" smooth={true} duration={500}>
                 <li>Planos</li>
               </Scroll>
+              <Scroll to="podcast" smooth={true} duration={500}>
+                <li>Pode+<br/>Chora-</li>
+              </Scroll>
               <Scroll to="horarys" smooth={true} duration={500}>
                 <li>Horários</li>
               </Scroll>
