@@ -13,40 +13,6 @@
     text-align: center;
 } */
 
-.legends {
-    position: relative;
-    width: 100%;
-    height: auto;
-    /* display: flex; */
-    color: var(--primary-title-color);
-    /* justify-content: center; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    text-align: center;
-    margin: auto;
-    margin: 25% auto auto auto;
-}
-
-.legends h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 3.5em;
-    font-weight: bold;
-    margin: 0px;
-}
-
-.legends h3 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2em;
-    font-weight: bold;
-    margin: 20px 0px;
-}
-
-.legends h4 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    margin: 50px 0px;
-}
-
 
 .legends label {
     padding: 20px;
@@ -83,11 +49,11 @@
 }
 
 .CLTFC h1 {
-    color: var(--primary-title-color);
+    color: var(--second-title-color);
 }
 
 .CLSTFC h3 {
-    color: var(--primary-subtitle-color);
+    color: var(--second-subtitle-color);
 }
 
 .CLTSC h1 {

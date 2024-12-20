@@ -1,10 +1,10 @@
 import "./Container.css";
 
-function Container({ children, padding, background, backgroundColor }) {
+function Container({ children, padding, background, backgroundColor, effect}) {
   return (
     <div className={`container ${padding || ""}`}>
       <div
-        className="container-background"
+        className={`container-background ${effect === 1 ? 'blur' : ''}`}
         style={{
           backgroundImage: background
             ? `url(${background})`

@@ -1,8 +1,10 @@
-import './Frames.css';
+import "./Frames.css";
 import squareFrameIMG from "./../images/frameAthelets.png";
 import { FaFacebook } from "react-icons/fa"; // Importa um ícone do FontAwesome
 import { FaWhatsapp } from "react-icons/fa"; // Importa um ícone do FontAwesome
 import { FaInstagram } from "react-icons/fa"; // Importa um ícone do FontAwesome
+import { FaCheckSquare } from "react-icons/fa"; // Importa um ícone do FontAwesome
+import { FaWindowClose } from "react-icons/fa"; // Importa um ícone do FontAwesome
 import oblongFrameIMG from "./../images/frame.png";
 
 function FramesSquare({ children }) {
@@ -18,17 +20,29 @@ function FrameSquare({ name, image, facebook, whatsapp, instagram }) {
         <label>{name}</label>
         <div className="socialMedia">
           {facebook && (
-            <a href={`https://www.facebook.com/${facebook}`} target="_blank"  rel="noopener noreferrer">
+            <a
+              href={`https://www.facebook.com/${facebook}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebook className="facebook icon" />
             </a>
           )}
           {whatsapp && (
-            <a href={`https://wa.me/${whatsapp}`} target="_blank" rel="noopener noreferrer">
+            <a
+              href={`https://wa.me/${whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaWhatsapp className="whatsapp icon" />
             </a>
           )}
           {instagram && (
-            <a href={`https://www.instagram.com${instagram}`} target="_blank" rel="noopener noreferrer">
+            <a
+              href={`https://www.instagram.com${instagram}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram className="instagram icon" />
             </a>
           )}
@@ -52,17 +66,29 @@ function FrameOblong({ name, image, facebook, whatsapp, instagram }) {
         <label className="position">Função</label>
         <div className="socialMedia">
           {facebook && (
-            <a href={`https://www.facebook.com/${facebook}`} target="_blank" rel="noopener noreferrer">
+            <a
+              href={`https://www.facebook.com/${facebook}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebook className="facebook icon" />
             </a>
           )}
           {whatsapp && (
-            <a href={`https://wa.me/${whatsapp}`} target="_blank" rel="noopener noreferrer">
+            <a
+              href={`https://wa.me/${whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaWhatsapp className="whatsapp icon" />
             </a>
           )}
           {instagram && (
-            <a href={`https://www.instagram.com${instagram}`} target="_blank" rel="noopener noreferrer">
+            <a
+              href={`https://www.instagram.com${instagram}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram className="instagram icon" />
             </a>
           )}
@@ -93,7 +119,11 @@ function FramesSelect({ children }) {
 }
 
 function FrameStatus({ status, children }) {
-  return <li className={status === 1 ? "active" : "desactived"}>{children}</li>;
+  return (
+    <li className={status === 1 ? "active" : "desactived"}>
+      {status === 1 ? <FaCheckSquare /> : <FaWindowClose />} {children}
+    </li>
+  );
 }
 
 function FrameSelect({ name, value, children }) {
@@ -112,6 +142,32 @@ function FrameSelect({ name, value, children }) {
   );
 }
 
+function FramesHorizontal({ children }) {
+  return <div id="horizontalFrames">{children}</div>;
+}
+
+function HorizontalFront({ title, children }) {
+  return (
+    <div className="horizontalFront">
+      {children}
+      <h1>{title}</h1>
+    </div>
+  );
+}
+
+function HorizontalBack({ children }) {
+  return <div className="horizontalBack">{children}</div>;
+}
+
+function FrameHorizontal({ image, children }) {
+  return (
+    <div className="horizontal">
+      <img alt="" className="horizontalBackground" src={image} />
+      {children}
+    </div>
+  );
+}
+
 export {
   FramesSquare,
   FrameSquare,
@@ -122,4 +178,8 @@ export {
   FramesSelect,
   FrameSelect,
   FrameStatus,
+  HorizontalFront,
+  HorizontalBack,
+  FramesHorizontal,
+  FrameHorizontal,
 };

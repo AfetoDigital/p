@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { Link as Scroll } from "react-scroll";
 import Home from "./../components/Home.js";
 import logo from "./../images/logo.jpg";
-import Atheletes from "../components/Atheletes.js";
 import { HashLink } from "react-router-hash-link";
 
 function AppHeader() {
@@ -32,23 +31,20 @@ function AppHeader() {
               <HashLink smooth to="/#start">
                 <li>Inicio</li>
               </HashLink>
-              <HashLink smooth to="/atletas/#start">
-                <li>Atletas</li>
-              </HashLink>
-              <Scroll to="modalities" smooth={true} duration={500}>
-                <li>Modalidades</li>
+              <Scroll to="especialidades" smooth={true} duration={500}>
+                <li>Especialidades</li>
               </Scroll>
-              <Scroll to="trainers" smooth={true} duration={500}>
-                <li>Equipe</li>
+              <Scroll to="about" smooth={true} duration={500}>
+                <li>Quem sou?</li>
               </Scroll>
               <Scroll to="plans" smooth={true} duration={500}>
                 <li>Planos</li>
               </Scroll>
-              <Scroll to="podcast" smooth={true} duration={500}>
-                <li>Pode+<br/>Chora-</li>
+              <Scroll to="asks" smooth={true} duration={500}>
+                <li>Perguntas Frequentes</li>
               </Scroll>
-              <Scroll to="horarys" smooth={true} duration={500}>
-                <li>Horários</li>
+              <Scroll to="localizacao" smooth={true} duration={500}>
+                <li>Localização</li>
               </Scroll>
               <Scroll to="contacts" smooth={true} duration={500}>
                 <li>Contatos</li>
@@ -61,7 +57,6 @@ function AppHeader() {
       {/* Definindo as rotas */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/atletas" element={<Atheletes />} />
       </Routes>
     </Router>
   );

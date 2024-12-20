@@ -26,7 +26,7 @@
     z-index: -1;
 }
 
-.container-background::before {
+.blur::before {
     content: "";
     position: fixed;
     top: 0;
@@ -40,4 +40,5 @@
     --tw-gradient-to: hsl(var(--background) / 0.6) var(--tw-gradient-to-position);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(5px);
+    filter: contrast(0.8);
 }
