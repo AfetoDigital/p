@@ -37,7 +37,7 @@
 
 .ContentText h4, .ContentModel2 h4 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.0em;
+    font-size: 1.3em;
     font-weight: 0;
     margin: 50px 0px;
     text-shadow: 0px 2px 2px #ffffff85;
@@ -80,7 +80,7 @@
 
 #contentsModel2 {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
